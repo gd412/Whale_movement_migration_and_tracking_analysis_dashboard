@@ -1,0 +1,108 @@
+✅ setup.txt — Whale Movement Analysis System
+📁 Project Files Required
+
+Place all files inside one folder:
+
+Whale Movement Analysis/
+│
+├── Whale_tracking.py - main page
+├── image_ai_page.py
+├── iot_buoy_page.py
+├── whale_model.pth            (AI model file)
+├── whales_only.csv            (dataset if used by AI page)
+├── Blue whales Eastern North Pacific ...csv
+├── train_whale_model.py       (optional – training script)
+├── model.ipynb                (optional – notebook) - for data Analysis and extraction of Whale images
+├── requirement.txt            (optional)
+
+🐍 Step 1 — Create Virtual Environment (Recommended)
+
+Open terminal inside project folder:
+
+python -m venv venv
+
+
+Activate it:
+
+Windows
+venv\Scripts\activate
+
+Mac/Linux
+source venv/bin/activate
+
+📦 Step 2 — Install All Required Packages
+
+Run this single block:
+
+pip install streamlit
+pip install pandas numpy
+pip install plotly
+pip install scikit-learn
+pip install prophet
+pip install matplotlib
+pip install pillow
+pip install opencv-python
+pip install torch torchvision torchaudio
+
+🔬 If Prophet fails to install
+
+Use:
+
+pip install prophet --no-cache-dir
+
+
+or
+
+pip install cmdstanpy
+pip install prophet
+
+🤖 If your Image AI page uses TensorFlow instead of PyTorch
+
+Install this instead of torch:
+
+pip install tensorflow
+
+
+(only needed if your classifier code imports tensorflow/keras)
+
+🗺 Map Rendering Requirement
+
+Plotly mapbox uses open-street-map — no API key needed ✅
+
+No extra installs required.
+
+▶️ Step 3 — Run the App
+streamlit run Whale_tracking.py
+
+🧭 Sidebar Pages You Will See
+
+After launch:
+
+Movement Analytics
+Whale Image AI Classifier
+Smart IoT Simulation
+
+⚠️ Common Fixes
+Prophet import error
+pip install prophet
+
+Torch model load error
+
+Make sure:
+
+whale_model.pth
+
+
+is in same folder as app.
+
+Dataset not loading
+
+Update dataset path inside:
+
+Whale_tracking.py
+
+✅ Optional Freeze Requirements File
+
+After install, you can generate:
+
+pip freeze > requirements.txt
