@@ -1,0 +1,26 @@
+{
+  "ais_api": {
+    "provider": "aisstream",
+    "api_key": "ddda498c3a36819365ac93598c8a851b371ba5b0",
+    "websocket_url": "wss://stream.aisstream.io/v0/stream"
+  },
+  "geographic_bounds": {
+    "lat_min": 30.0,
+    "lat_max": 50.0,
+    "lon_min": -130.0,
+    "lon_max": -115.0
+  },
+  "risk_thresholds": {
+    "critical_distance_km": 2.0,
+    "high_distance_km": 5.0,
+    "medium_distance_km": 15.0,
+    "low_distance_km": 30.0,
+    "dangerous_speed_knots": 10.0
+  },
+  "websocket_settings": {
+    "connection_timeout_seconds": 30,
+    "data_collection_duration_seconds": 60,
+    "max_vessels_to_collect": 500
+  },
+  "whale_data_path": "Blue whales Eastern North Pacific 1993-2008 - Argos Data.csv"
+}
